@@ -1,42 +1,63 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  --green-background-color: #10170f;
+  background-color: var(--green-background-color);
+  --green-color: #18dc0c;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+@font-face {
+  font-family: Mono;
+  src: url("./fonts/monofonto.ttf");
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@font-face {
+  font-family: Share;
+  src: url("./fonts/ShareTechMono-Regular.ttf");
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.pipboy {
+  z-index: 1;
+  overflow: hidden;
 }
 
-.card {
-  padding: 2em;
+.screen {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 19%;
+  left: 28%;
+  width: 29%;
+  overflow-x: clip;
 }
 
-.read-the-docs {
-  color: #888;
+nav {
+  color: var(--green-color);
+}
+
+ul {
+  display: flex;
+
+  gap: 2em;
+  text-transform: uppercase;
+}
+
+li {
+  font-family: Mono;
+}
+
+.left-line {
+  position: absolute;
+  top: -45.5%;
+  left: -83.5%;
+}
+.right-line {
+  position: absolute;
+  top: -45.5%;
+  left: 26.5%;
 }
