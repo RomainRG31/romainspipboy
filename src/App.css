@@ -2,6 +2,8 @@
   --green-background-color: #10170f;
   background-color: var(--green-background-color);
   --green-color: #18dc0c;
+  --second-green-color: #11291b;
+  font-family: Mono;
 }
 
 @font-face {
@@ -27,6 +29,7 @@
 
 .screen {
   position: absolute;
+  margin-bottom: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,26 +41,211 @@
 
 nav {
   color: var(--green-color);
+  & ul {
+    display: flex;
+    gap: 2em;
+    text-transform: uppercase;
+  }
+  & li {
+    font-family: Mono;
+  }
 }
 
-ul {
-  display: flex;
-
-  gap: 2em;
+.under-nav {
+  color: var(--green-color);
   text-transform: uppercase;
-}
-
-li {
   font-family: Mono;
+  margin-top: 1em;
+  display: flex;
+  padding-right: 6.4em;
+  & ul {
+    display: flex;
+    gap: 0.5em;
+  }
 }
 
 .left-line {
   position: absolute;
-  top: -45.5%;
+  top: -7.5%;
   left: -83.5%;
 }
 .right-line {
   position: absolute;
-  top: -45.5%;
+  top: -7.5%;
   left: 26.5%;
+}
+
+.health-gauge-container {
+  & img {
+    position: absolute;
+    top: 148%;
+    right: 40%;
+  }
+}
+
+.health-gauge {
+  border: 0.1rem solid var(--green-color);
+  background: var(--green-background-color);
+  width: 3.2rem;
+  height: 0.5rem;
+  position: absolute;
+}
+
+.health-gauge-top,
+.health-gauge-top-right,
+.health-gauge-bottom-right,
+.health-gauge-bottom,
+.health-gauge-bottom-left,
+.health-gauge-top-left {
+  position: absolute;
+}
+
+.health-gauge-top {
+  top: 112%;
+  left: 43%;
+  &:before {
+    content: "";
+    border: 0.1rem solid var(--green-color);
+    background: var(--green-color);
+    width: 3.2rem;
+    height: 0.4rem;
+    position: absolute;
+  }
+}
+
+.health-gauge-top-right {
+  right: 15%;
+  top: 215%;
+  &:before {
+    content: "";
+    border: 0.1rem solid var(--green-color);
+    background: var(--green-color);
+    width: 3.2rem;
+    height: 0.4rem;
+    position: absolute;
+  }
+}
+
+.health-gauge-bottom-right {
+  top: 320%;
+  right: 15%;
+  &:before {
+    content: "";
+    border: 0.1rem solid var(--green-color);
+    background: var(--green-color);
+    width: 3.2rem;
+    height: 0.4rem;
+    position: absolute;
+  }
+}
+.health-gauge-bottom {
+  top: 421%;
+  left: 43%;
+  &:before {
+    content: "";
+    border: 0.1rem solid var(--green-color);
+    background: var(--green-color);
+    width: 2.61rem;
+    height: 0.4rem;
+    position: absolute;
+  }
+}
+.health-gauge-bottom-left {
+  top: 320%;
+  left: 20%;
+  &:before {
+    content: "";
+    border: 0.1rem solid var(--green-color);
+    background: var(--green-color);
+    width: 3.2rem;
+    height: 0.4rem;
+    position: absolute;
+  }
+}
+.health-gauge-top-left {
+  top: 215%;
+  left: 20%;
+  &:before {
+    content: "";
+    border: 0.1rem solid var(--green-color);
+    background: var(--green-color);
+    width: 1.61rem;
+    height: 0.4rem;
+    position: absolute;
+  }
+}
+
+.stats-container {
+  display: flex;
+  position: absolute;
+  top: 453%;
+  gap: 0.3em;
+  height: 2.2em;
+  & p {
+    color: var(--green-color);
+    font-size: 0.6em;
+  }
+}
+
+.languages-container {
+  background-color: var(--second-green-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brackets-container,
+.info-icon-web,
+.engineering-container {
+  margin-right: 0.5em;
+  & img {
+    height: 100%;
+    width: 2em;
+  }
+}
+
+.me {
+  position: absolute;
+  top: 537%;
+  color: var(--green-color);
+  font-size: 0.8em;
+}
+
+footer {
+  display: flex !important;
+  position: absolute;
+  top: 53%;
+  right: 45.8%;
+  gap: 1em;
+  & p {
+    color: var(--green-color);
+    text-transform: uppercase;
+  }
+  > .level-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+}
+
+.health-gauge-level {
+  border: 0.1rem solid var(--green-color);
+  background: var(--green-background-color);
+  width: 3.2rem;
+  height: 0.5rem;
+  &:before {
+    content: "";
+    border: 0.1rem solid var(--green-color);
+    background: var(--green-color);
+    width: 2.5rem;
+    height: 0.4rem;
+    position: absolute;
+  }
+}
+
+.hp-container,
+.level-container,
+.ap-container {
+  background-color: var(--second-green-color);
+  padding: 0.2em;
 }
