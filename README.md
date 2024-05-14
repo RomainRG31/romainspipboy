@@ -19,7 +19,7 @@ Pour lancer le projet localement, suivez ces étapes :
 
 1. Clonez ce dépôt :
    ```bash
-   git clone [https://github.com/votre_username/pipboy-cv.git](https://github.com/RomainRG31/romainspipboy.git)
+   git clone https://github.com/RomainRG31/romainspipboy.git
 
 2. Naviguez vers le répertoire du projet :
    ```bash
