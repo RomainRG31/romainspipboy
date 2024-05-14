@@ -1,0 +1,11 @@
+.display-flex-special {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 0.1em;
+  color: var(--green-color);
+  &:hover {
+    background-color: var(--green-color);
+    color: var(--green-background-color);
+  }
+}

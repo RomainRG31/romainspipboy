@@ -7,13 +7,10 @@ import gif from "/assets/img/vault_boy_walking.gif";
 import brackets from "/assets/img/brackets.png";
 import infoWeb from "/assets/img/web_application_logo.png";
 import engineering from "/assets/img/engineering.png";
-import strength from "/assets/img/strength.gif";
-import perception from "/assets/img/perception.gif";
-import endurance from "/assets/img/endurance.gif";
-import charisma from "/assets/img/charisma.gif";
-import intelligence from "/assets/img/intelligence.gif";
-import agility from "/assets/img/agility.gif";
-import luck from "/assets/img/luck.gif";
+import BlockSpecial from "./components/BlockSpecial";
+import { BlockSpecialDatas } from "./utils/BlockSpecialDatas";
+import { SpecNoteDatas } from "./utils/SpecNoteDatas";
+import SpecNote from "./components/SpecNote";
 
 function App() {
   return (
@@ -40,26 +37,26 @@ function App() {
               <img src={leftLine} className="left-line" alt="" />
               <img src={rightLine} className="right-line" alt="" />
             </div>
+            <div className="under-nav">
+              <ul>
+                <li>
+                  <a href="#status" className="li-active">
+                    status
+                  </a>
+                </li>
+                <li>
+                  <a href="#special" className="li-active">
+                    special
+                  </a>
+                </li>
+                <li>
+                  <a href="#perks" className="li-active">
+                    perks
+                  </a>
+                </li>
+              </ul>
+            </div>
             <section className="core-display status" id="status">
-              <div className="under-nav">
-                <ul>
-                  <li>
-                    <a href="#status" className="li-active">
-                      status
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#special" className="li-active">
-                      special
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#perks" className="li-active">
-                      perks
-                    </a>
-                  </li>
-                </ul>
-              </div>
               <div className="health-gauge-container">
                 <img src={gif} width={"20%"} alt="vault boy image" />
                 <div className="health-gauge health-gauge-top"></div>
@@ -130,61 +127,19 @@ function App() {
             <section className="core-display" id="special">
               <div className="container-special">
                 <div className="left-block-special">
-                  <div>
-                    <div className="display-flex-special">
-                      <p>Strength</p>
-                      <p>7</p>
-                    </div>
-                    <div className="display-flex-special ">
-                      <p>Perception</p>
-                      <p>5</p>
-                    </div>
-                    <div className="display-flex-special">
-                      <p>Endurance</p>
-                      <p>8</p>
-                    </div>
-                    <div className="display-flex-special">
-                      <p>Charisma</p>
-                      <p>3</p>
-                    </div>
-                    <div className="display-flex-special">
-                      <p>Intelligence</p>
-                      <p>10</p>
-                    </div>
-                    <div className="display-flex-special">
-                      <p>Agility</p>
-                      <p>4</p>
-                    </div>
-                    <div className="display-flex-special">
-                      <p>Luck</p>
-                      <p>5</p>
-                    </div>
-                  </div>
+                  {SpecNoteDatas.map((data) => (
+                    <SpecNote key={data.id} spec={data.spec} note={data.note} />
+                  ))}
                 </div>
                 <div className="right-block-special right-block-special-active">
-                  <img src={strength} className="menu-attribate-image" alt="" />
-                  <img
-                    src={perception}
-                    className="menu-attribate-image"
-                    alt=""
-                  />
-                  <img
-                    src={endurance}
-                    className="menu-attribate-image"
-                    alt=""
-                  />
-                  <img src={charisma} className="menu-attribate-image" alt="" />
-                  <img
-                    src={intelligence}
-                    className="menu-attribate-image"
-                    alt=""
-                  />
-                  <img src={agility} className="menu-attribate-image" alt="" />
-                  <img src={luck} className="menu-attribate-image" alt="" />
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Vel, reprehenderit!
-                  </p>
+                  {BlockSpecialDatas.map((data, index) => (
+                    <BlockSpecial
+                      className={data.class}
+                      key={index}
+                      img={data.img}
+                      sentence={data.sentence}
+                    />
+                  ))}
                 </div>
               </div>
             </section>

@@ -1,0 +1,13 @@
+.menu-attribute-image {
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(50deg)
+    saturate(1000%) contrast(0.8);
+}
+
+.menu-attribute-luck,
+.menu-attribute-agility,
+.menu-attribute-intelligence,
+.menu-attribute-charisma,
+.menu-attribute-endurance,
+.menu-attribute-perception {
+  display: none;
+}

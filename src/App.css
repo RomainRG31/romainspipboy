@@ -23,7 +23,7 @@ a:visited {
 }
 
 .status {
-  display: none;
+  display: block;
 }
 
 .core-display {
@@ -33,21 +33,9 @@ a:visited {
 .container-special {
   display: flex;
   position: absolute;
-  top: 273%;
+  top: 130%;
   left: 15%;
   gap: 5%;
-}
-
-.display-flex-special {
-  display: flex;
-  cursor: pointer;
-  justify-content: space-between;
-  padding: 0.1em;
-  color: var(--green-color);
-  &:hover {
-    background-color: var(--green-color);
-    color: var(--green-background-color);
-  }
 }
 
 .left-block-special {
@@ -56,7 +44,6 @@ a:visited {
   width: 8em;
 }
 .right-block-special {
-  display: none;
   max-width: 50%;
   & p {
     color: var(--green-color);
@@ -68,12 +55,6 @@ a:visited {
 .perception-active {
   display: block;
 }
-
-.menu-attribate-image {
-  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(50deg)
-    saturate(1000%) contrast(0.8);
-}
-
 .li-active {
   opacity: 0.5;
   &:active {
@@ -123,7 +104,7 @@ nav {
   font-family: Mono;
   margin-top: 1em;
   display: flex;
-  padding-right: 6.4em;
+  padding-right: 8.4em;
   & ul {
     display: flex;
     gap: 0.5em;
@@ -245,6 +226,7 @@ nav {
   display: flex;
   position: absolute;
   top: 453%;
+  right: 18%;
   gap: 0.3em;
   height: 2.2em;
   & p {
