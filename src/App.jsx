@@ -56,7 +56,10 @@ function App() {
                 </li>
               </ul>
             </div>
-            <section className="core-display status" id="status">
+            <section
+              className="core-display-status-active core-display-status "
+              id="status"
+            >
               <div className="health-gauge-container">
                 <img src={gif} width={"20%"} alt="vault boy image" />
                 <div className="health-gauge health-gauge-top"></div>
@@ -124,7 +127,10 @@ function App() {
               </div>
               <p className="me">Romain Gelder-Roger: Développeur web</p>
             </section>
-            <section className="core-display" id="special">
+            <section
+              className="core-display-special-active core-display-special "
+              id="special"
+            >
               <div className="container-special">
                 <div className="left-block-special">
                   {SpecNoteDatas.map((data) => (
